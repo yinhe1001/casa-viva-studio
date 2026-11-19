@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>CASA VIVA Studio · ALYKÈ</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#F4EBDD;--warm:#FAF7F2;--sea:#203F79;--lemon:#E6B83F;--olive:#6C8A62;--ink:#3A3532;--sand:#D8CFC2;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--warm:#1c1a18;--cream:#27231f;--ink:#efe6d8;--sand:#4a443d;--card:#2b2723;--sea:#4a6fc0}}
+:root[data-theme=dark]{--warm:#1c1a18;--cream:#27231f;--ink:#efe6d8;--sand:#4a443d;--card:#2b2723;--sea:#4a6fc0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--warm);color:var(--ink);font:14px/1.5 Inter,"PingFang SC","Noto Sans SC",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--warm);z-index:30}
+h2,h3,.logo,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+button{font:inherit;color:inherit;border:1px solid var(--sand);background:var(--card);border-radius:99px;padding:6px 14px;cursor:pointer;transition:.2s}
+button:hover{border-color:var(--sea)}button.on,button.pri{background:var(--sea);color:#fff;border-color:var(--sea)}
+button i,h3 i{display:block;font-size:10px;font-style:normal;opacity:.7}h3 i{display:inline;font-size:13px;margin-left:6px}
+#hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--warm);border-bottom:1px solid var(--sand);flex-wrap:wrap}
+.logo{font-size:24px;letter-spacing:.14em}.logo small{font:10px Inter,sans-serif;letter-spacing:.2em;display:block;opacity:.6}
+#nav,.rt,.row,.tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.langpick{display:inline-flex;gap:6px;align-items:center;font-size:12px;white-space:nowrap}.langpick span{opacity:.75}#nav button{border-radius:12px;text-align:left}
+#studio{display:grid;grid-template-columns:1fr 360px;gap:16px;padding:16px;max-width:1280px;margin:auto}
+.stage{position:relative;height:min(76vh,720px);border:1px solid var(--sand);border-radius:20px;overflow:hidden;background:var(--cream)}
+#cv{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}[hidden]{display:none!important}#intro{max-width:1280px;margin:16px auto 0;padding:0 16px}#intro>div{background:var(--card);border:1px solid var(--sand);border-radius:20px;padding:18px 22px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}#intro h2{font-size:26px;color:var(--sea)}#intro p{max-width:640px;font-size:13px}#intro .row span{background:var(--cream);border-radius:99px;padding:4px 12px;font-size:12px}
+.views{position:absolute;top:12px;right:12px;display:flex;gap:4px}.sb{position:absolute;bottom:12px;left:12px;right:12px;display:flex;gap:6px;flex-wrap:wrap}
+.hint{position:absolute;top:14px;left:16px;max-width:55%;font-size:12px;color:#3A3532;pointer-events:none}
+.stage button{background:rgba(250,247,242,.85);color:#3A3532}.stage button.on{background:var(--sea);color:#fff}
+#panel{background:var(--card);border:1px solid var(--sand);border-radius:20px;padding:18px;max-height:min(76vh,720px);overflow:auto;display:flex;flex-direction:column;gap:12px}
+h3{font-size:24px}.lb,.sm{font-size:12px;opacity:.75}.lb input{width:100%;accent-color:var(--sea)}
+.sw{width:30px;height:30px;border-radius:50%;padding:0;border:2px solid var(--card);box-shadow:0 0 0 1px var(--sand)}.sw.on{box-shadow:0 0 0 2px var(--sea)}
+#steps{padding-left:18px}#steps li{opacity:.45}#steps li.cur{opacity:1;font-weight:500}#steps li.ok{opacity:.9;color:var(--olive)}#steps li.ok::marker{content:"✓ "}
+.know{background:var(--cream);border-left:3px solid var(--lemon);padding:10px 12px;border-radius:8px;font-size:13px;animation:in .5s}
+@keyframes in{from{opacity:0;transform:translateX(16px)}}
+input[type=text],textarea{width:100%;padding:8px 12px;border:1px solid var(--sand);border-radius:10px;background:var(--warm);color:var(--ink);font:inherit}
+#store{max-width:1180px;margin:auto;padding:16px}.ban{background:linear-gradient(120deg,var(--sea),#3a5f9f);color:#fff;border-radius:20px;padding:34px 26px;margin-bottom:20px}.ban h2{font-size:34px;line-height:1.1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:12px 0 26px}
+.pc{background:var(--card);border:1px solid var(--sand);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:6px}.pc canvas,.pc img{width:100%;border-radius:10px;background:var(--cream);aspect-ratio:14/11;object-fit:contain}.product-collage{display:grid;grid-template-columns:1fr 1fr;gap:2px;aspect-ratio:14/11;overflow:hidden;border-radius:10px;background:var(--cream)}.product-collage img{width:100%;height:100%;min-height:0;object-fit:contain;border-radius:0}
+.soon{border:1px dashed var(--sand);border-radius:16px;padding:20px;backdrop-filter:blur(6px);background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(216,207,194,.18) 10px 11px)}
+.bes{display:grid;grid-template-columns:240px 1fr;gap:16px;background:var(--card);border:2px solid var(--lemon);border-radius:18px;padding:14px;margin-bottom:22px}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(380px,100%);background:var(--card);z-index:40;transform:translateX(105%);transition:.35s;padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:-8px 0 30px rgba(0,0,0,.15);overflow:auto}.drawer.open{transform:none}
+.ci{display:grid;grid-template-columns:56px 1fr;gap:10px;border-bottom:1px solid var(--sand);padding-bottom:8px}.ci img{width:56px;height:46px;object-fit:contain;background:var(--cream);border-radius:8px}
+#modal{position:fixed;inset:0;background:rgba(30,25,20,.6);z-index:50;display:flex;align-items:center;justify-content:center;padding:14px}#modal[hidden]{display:none}
+.mb{background:var(--card);border-radius:18px;padding:16px;max-width:520px;width:100%;max-height:92vh;overflow:auto;display:flex;flex-direction:column;gap:10px;text-align:center}.mb img.cd{max-height:64vh;width:auto;max-width:100%;margin:auto;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+#toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translate(-50%,30px);background:var(--ink);color:var(--warm);padding:9px 18px;border-radius:99px;opacity:0;transition:.3s;z-index:60;pointer-events:none;max-width:92%;text-align:center}#toast.s{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){#studio{grid-template-columns:1fr;padding:10px}.stage{height:58vh}#panel{max-height:none}.bes{grid-template-columns:1fr}.ban h2{font-size:26px}.hint{max-width:38%}#intro h2{font-size:20px}#intro>div{padding:14px 16px}#hd{padding:8px 10px}}
+select{font:inherit;color:inherit;background:var(--card);border:1px solid var(--sand);border-radius:99px;padding:6px 10px;cursor:pointer}</style></head><body>
+<header id="hd"><div class="logo">ALYKÈ<small>CASA VIVA STUDIO</small></div>
+<nav id="nav"><button data-m="class" class="on" data-l="nav1"></button><button data-m="free" data-l="nav2"></button><button data-m="store" data-l="nav3"></button></nav>
+<div class="rt"><label class="langpick"><span data-l="languageLabel">Language / 语言</span><select id="lang" aria-label="Language"><option value="0">中文</option><option value="1">English</option><option value="2">Italiano</option><option value="3">Français</option></select></label><button id="demo" data-l="demo"></button><button id="bagBtn"><span data-l="bag"></span> · <b id="bagN">0</b></button></div></header>
+<main><div id="intro"><div><div><h2>ALYKÈ Casa Nativa · CASA VIVA Studio</h2><p data-l="introP"></p></div><div class="row"><span data-l="i1"></span><span data-l="i2"></span><span data-l="i3"></span></div></div></div><section id="studio"><div class="stage" id="stage"><canvas id="cv"></canvas>
+<div class="hint" id="hint"></div><div class="views"><button data-v="persp" class="on" data-l="v3d"></button><button data-v="front" data-l="vfront"></button><button data-v="top" data-l="vtop"></button></div>
+<div class="sb"><button id="undo" data-l="undo"></button><button id="rl">⟲</button><button id="rr">⟳</button><button id="spin" data-l="spin"></button><button id="scene" data-l="scene"></button></div></div>
+<aside id="panel">
+<div id="pc"><h3 data-l="mcH"></h3><div class="row" id="lcards" style="margin:10px 0"></div><ol id="steps"></ol>
+<div class="row" style="margin:10px 0"><button id="assist" data-l="assist"></button><b id="score"></b></div><div class="row" id="sw1"></div><div class="know" id="know" hidden></div>
+<div id="badge" hidden style="text-align:center;margin-top:12px"><div style="font-size:40px">🏺</div><h3 data-l="badgeH"></h3><button class="pri" id="toFree" style="margin-top:8px" data-l="toFree"></button></div></div>
+<div id="pf" hidden><h3 data-l="fsH"></h3>
+<div class="tabs" id="tools" style="margin:10px 0"><button data-t="shape" class="on" data-l="tShape"></button><button data-t="relief" data-l="tRel"></button><button data-t="glaze" data-l="tGlaze"></button><button data-t="mint" data-l="tMint"></button></div>
+<div class="tp" data-t="shape"><p class="lb" data-l="lBase"></p><div class="row" id="bases"></div><p class="lb"><span data-l="lH"></span><input type="range" id="hs" min=".5" max="1.8" step=".01" value="1"></p><p class="lb"><span data-l="lW"></span><input type="range" id="wl" min=".3" max="1.6" step=".05" value=".7"></p>
+<div class="row"><button id="wavy" data-l="wavy"></button><button id="smooth" data-l="smooth"></button></div><p class="sm" style="margin-top:8px" data-l="shapeTip"></p></div>
+<div class="tp" data-t="relief" hidden><p class="lb" data-l="relTip"></p><div class="row" id="rels"></div><button id="rmrel" style="margin-top:10px" data-l="rmrel"></button></div>
+<div class="tp" data-t="glaze" hidden><p class="lb" data-l="lGl"></p><div class="row" id="cols"></div><p class="lb" style="margin-top:8px" data-l="lTool"></p><div class="row" id="gms"></div><p class="lb"><span data-l="lSize"></span><input type="range" id="sz" min="2" max="14" value="6"></p><button id="dip" data-l="dip"></button></div>
+<div class="tp" data-t="mint" hidden><p class="lb" data-l="lEcho"></p><input type="text" id="echo" maxlength="28" data-lp="phEcho"><p class="lb" style="margin-top:8px" data-l="lInsp"></p><textarea id="insp" rows="3" maxlength="80" data-lp="phInsp"></textarea><button class="pri" id="mint" style="margin-top:10px;width:100%" data-l="mintB"></button></div></div>
+</aside></section><section id="store" hidden></section></main>
+<div class="drawer" id="bag"></div><div id="modal" hidden></div><div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],lerp=(a,b,t)=>a+(b-a)*t,clamp=(x,a,b)=>Math.max(a,Math.min(b,x)),hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)),$$$=(s,c)=>{s.innerHTML=c};
+let LG=1,kn=null;const tt=a=>a[LG],t=k=>T[k][LG];
+const T={
+languageLabel:['语言 / Language','Language','Lingua','Langue'],
+nav1:['1 · 大师工坊','1 · Master Class','1 · Scuola del Maestro','1 · Atelier du Maître'],
+nav2:['2 · 自由捏陶','2 · Free Studio','2 · Studio Libero','2 · Atelier Libre'],
+nav3:['3 · 家生活商城','3 · Store','3 · Negozio','3 · Boutique'],
+demo:['加载演示预设','Load Demo Preset','Carica demo','Charger la démo'],
+bag:['购物袋','Bag','Carrello','Panier'],
+undo:['↶ 撤销','↶ Undo','↶ Annulla','↶ Annuler'],
+spin:['↻ 转盘','↻ Spin','↻ Gira','↻ Tourner'],
+scene:['☀ 餐桌场景','☀ Table Scene','☀ Tavola','☀ Table'],
+v3d:['3D','3D','3D','3D'],vfront:['正视图','Front','Fronte','Face'],vtop:['俯视图','Top','Dall’alto','Dessus'],
+introP:['意大利阿马尔菲海岸切塔拉（Cetara）的精品旅居与餐桌艺术策展品牌。打破地理距离，在手机或电脑上真正动手做陶艺：先向大师学习地中海经典器型，再自由捏陶、生成专属作品档案卡，最后带回家生活商城。','ALYKÈ Casa Nativa is a boutique living-and-tableware curation brand from Cetara on Italy’s Amalfi Coast. Break the distance: really shape pottery on your phone or computer — learn classic Mediterranean forms from the master, create freely, mint your own design card, then take it home through the store.','ALYKÈ Casa Nativa è un marchio di ospitalità e arte della tavola di Cetara, sulla Costiera Amalfitana. Annulla la distanza: modella davvero la ceramica da telefono o computer — impara le forme classiche dal maestro, crea liberamente, ottieni la tua scheda d’opera e portala a casa dallo store.','ALYKÈ Casa Nativa est une maison d’art de vivre et d’art de la table de Cetara, sur la côte amalfitaine. Plus de distance : modelez vraiment la céramique sur téléphone ou ordinateur — apprenez les formes classiques auprès du maître, créez librement, éditez votre fiche d’œuvre puis rapportez-la chez vous via la boutique.'],
+i1:['① 学习','① Learn','① Impara','① Apprendre'],i2:['② 创作','② Create','② Crea','② Créer'],i3:['③ 带回家','③ Shop','③ Acquista','③ Acheter'],
+mcH:['大师工坊','Master Class','Scuola del Maestro','Atelier du Maître'],
+assist:['师傅扶一把','Guided hand','Mano del maestro','Main du maître'],
+badgeH:['工艺学徒印记','Master Apprentice Badge','Distintivo Apprendista','Badge d’Apprenti'],
+toFree:['进入自由捏陶工坊 →','Enter Free Studio →','Vai allo Studio Libero →','Entrer dans l’Atelier Libre →'],
+fsH:['自由捏陶工坊','Free Studio','Studio Libero','Atelier Libre'],
+tShape:['塑形','Shape','Forma','Forme'],tRel:['浮雕','Reliefs','Rilievi','Reliefs'],tGlaze:['釉色','Glaze','Smalto','Émail'],tMint:['档案卡','Card','Scheda','Fiche'],
+lBase:['起型','Base','Base','Base'],lH:['高度','Height','Altezza','Hauteur'],lW:['器壁','Wall','Parete','Paroi'],
+wavy:['波浪边 ∿','Wavy rim ∿','Bordo ondulato ∿','Bord ondulé ∿'],smooth:['抚平','Smooth','Liscia','Lisser'],
+shapeTip:['3D 拖动旋转 · 正视图拖拽器壁与弧度 · 俯视图沿盘沿捏出海浪边缘','3D: drag to rotate · Front: drag the wall · Top: pinch a wavy rim along the edge','3D: trascina per ruotare · Fronte: trascina la parete · Dall’alto: pizzica un bordo ondulato','3D : glisser pour tourner · Face : tirer la paroi · Dessus : pincer un bord ondulé'],
+relTip:['点选浮雕，再点击或拖动到器物上','Pick a relief, then tap or drag it onto the vessel','Scegli un rilievo, poi tocca o trascina sul vaso','Choisissez un relief puis touchez ou glissez-le sur la pièce'],
+rmrel:['撤掉最后一个','Remove last','Rimuovi l’ultimo','Retirer le dernier'],
+lGl:['釉色','Glaze colour','Colore smalto','Couleur d’émail'],lTool:['工具','Tool','Strumento','Outil'],lSize:['粗细','Size','Spessore','Taille'],
+dip:['整体上釉','Dip whole vessel','Immergi tutto','Tremper la pièce'],
+lEcho:['作品命名 My ECHO','My ECHO (name)','Il mio ECHO (nome)','Mon ECHO (nom)'],phEcho:['如：Cetara Tide','e.g. Cetara Tide','es. Cetara Tide','p. ex. Cetara Tide'],
+lInsp:['灵感短句 Inspiration','Inspiration','Ispirazione','Inspiration'],phInsp:['阳光落在阿马尔菲的海面上…','Sunlight on the Amalfi sea…','Il sole sul mare di Amalfi…','Le soleil sur la mer d’Amalfi…'],
+mintB:['生成作品档案卡 Mint Design Card','Mint Design Card','Crea la scheda dell’opera','Éditer la fiche d’œuvre'],
+match:['匹配','match','corrispondenza','accord'],
+swTip:['点选大师推荐釉色','Pick the master’s glaze','Scegli lo smalto del maestro','Choisissez l’émail du maître'],
+hFront:['正视图 · 拖拽器壁调整高度与弧度','Front · drag the wall to adjust height and curve','Fronte · trascina la parete per altezza e curva','Face · tirez la paroi pour la hauteur et la courbe'],
+hTop:['俯视图 · 沿盘沿拖动，捏出海浪边缘','Top · drag along the rim to pinch waves','Dall’alto · trascina lungo il bordo per creare onde','Dessus · glissez le long du bord pour former des vagues'],
+hPersp:['3D · 拖动旋转','3D · drag to rotate','3D · trascina per ruotare','3D · glissez pour tourner'],
+hGlaze:['涂抹釉色','Paint the glaze','Dipingi lo smalto','Peignez l’émail'],
+hRel:['点击或拖动器物，贴合泥塑浮雕','Tap or drag on the vessel to place the relief','Tocca o trascina sul vaso per posare il rilievo','Touchez ou glissez sur la pièce pour poser le relief'],
+untitled:['未命名 Echo','Untitled Echo','Echo senza titolo','Echo sans titre'],
+defInsp:['阳光、海盐与柠檬的光。','Sun, salt and lemon light.','Sole, sale e luce di limone.','Soleil, sel et lumière de citron.'],
+demoInsp:['海盐的风、柠檬的光，和一张欢迎所有人的餐桌。','Salt air, lemon light, and a table that welcomes everyone.','Aria di mare, luce di limone e una tavola che accoglie tutti.','Air salin, lumière de citron et une table qui accueille tout le monde.'],
+cardT:['作品档案卡 N°','DESIGN CARD  N°','SCHEDA D’OPERA  N°','FICHE D’ŒUVRE  N°'],
+front2:['正视图','FRONT ELEVATION','PROSPETTO','ÉLÉVATION'],top2:['俯视图','TOP PLAN','PIANTA','PLAN'],
+reliefsL:['泥塑配件','Reliefs','Rilievi','Reliefs'],bisque:['天然素坯','Natural bisque','Biscotto naturale','Biscuit naturel'],
+cardH:['你的 CASA VIVA 作品档案卡','Your CASA VIVA Design Card','La tua scheda CASA VIVA','Votre fiche CASA VIVA'],
+saveTip:['长按 / 右键图片可保存','Long-press or right-click to save','Tieni premuto o clic destro per salvare','Appui long ou clic droit pour enregistrer'],
+saveB:['保存图片','Save image','Salva immagine','Enregistrer'],shareB:['分享','Share','Condividi','Partager'],
+orderB:['前往商城定制此作品','Order in Store','Ordina nello store','Commander en boutique'],close:['关闭 ✕','Close ✕','Chiudi ✕','Fermer ✕'],
+tUndo:['没有可撤销的操作','Nothing to undo','Niente da annullare','Rien à annuler'],tDemo:['演示预设已加载','Demo preset loaded','Demo caricata','Démo chargée'],
+tAdd:['已加入购物袋','Added to bag','Aggiunto al carrello','Ajouté au panier'],
+tSaved:['已保存 / 长按图片亦可','Saved — or long-press the image','Salvata — o tieni premuta l’immagine','Enregistrée — ou appui long sur l’image'],
+tShare:['请保存后分享到社交平台','Save it, then share anywhere','Salvala e poi condividila','Enregistrez-la puis partagez-la'],
+banSub:['第一季：餐桌器物系列现已发售；更多地中海家生活好物即将呈现。','Chapter I: Tableware is now available. More coastal living objects coming soon.','Capitolo I: la collezione Tavola è disponibile. Presto altri oggetti dal sapore costiero.','Chapitre I : les Arts de la table sont disponibles. D’autres objets de vie côtière arrivent bientôt.'],
+besH:['专属定制作品','Your Bespoke Creation','La tua creazione su misura','Votre création sur mesure'],
+madeTo:['按需定制 · 2–3 周交付 · 意大利维耶特里合作工坊手工烧制','Made-to-Order · 2–3 weeks · hand-fired at our partner workshop in Vietri, Italy','Su ordinazione · 2–3 settimane · cotto a mano nel laboratorio partner di Vietri','Sur commande · 2–3 semaines · cuit à la main dans notre atelier partenaire de Vietri'],
+giftL:['环保纸浆礼盒 + 手写赠言卡 (+€8)','Eco pulp gift box + handwritten card (+€8)','Scatola regalo in pasta di carta + biglietto a mano (+€8)','Coffret en pulpe écologique + carte manuscrite (+€8)'],
+notePh:['手写赠言…','Handwritten note…','Biglietto scritto a mano…','Mot manuscrit…'],
+addBag:['加入购物袋','Add to Bag','Aggiungi al carrello','Ajouter au panier'],
+noDes:['还没有专属作品 · 去自由工坊创作一件','No bespoke piece yet · create one in the Free Studio','Nessuna creazione ancora · creane una nello Studio Libero','Aucune création pour l’instant · créez-en une dans l’Atelier Libre'],
+goFree:['前往自由工坊 →','Go to Free Studio →','Vai allo Studio Libero →','Aller à l’Atelier Libre →'],
+ch1:['第一季 · 餐具','Chapter I · Tableware','Capitolo I · Tavola','Chapitre I · Arts de la table'],
+upc:['后续系列','Upcoming Chapters','Prossimi capitoli','Prochains chapitres'],
+soonTag:['敬请期待','COMING SOON','PROSSIMAMENTE','BIENTÔT'],
+notify:['上新提醒','Notify Me','Avvisami','Me prévenir'],notified:['✓ 已加入提醒','✓ Subscribed','✓ Iscritto','✓ Inscrit'],
+bagH:['购物袋','Your Bag','Il tuo carrello','Votre panier'],empty:['购物袋是空的','Your bag is empty.','Il carrello è vuoto.','Votre panier est vide.'],
+giftB:['礼盒 +€8','Gift box +€8','Confezione regalo +€8','Coffret cadeau +€8'],total:['合计','Total','Totale','Total'],
+checkout:['模拟结算','Checkout','Vai al pagamento','Payer'],besSub:['定制 · 2–3 周交付','Bespoke · made-to-order, 2–3 weeks','Su misura · 2–3 settimane','Sur mesure · 2–3 semaines'],
+ordH:['订单已确认','Order Confirmed','Ordine confermato','Commande confirmée'],ordNo:['订单号','Order No.','N. ordine','N° de commande'],
+ordNote:['定制作品由维耶特里工坊手工烧制，约 2–3 周交付。Created with ALYKÈ Casa Nativa.','Bespoke pieces are hand-fired in Vietri · 2–3 weeks. Created with ALYKÈ Casa Nativa.','I pezzi su misura sono cotti a mano a Vietri · 2–3 settimane. Created with ALYKÈ Casa Nativa.','Les pièces sur mesure sont cuites à la main à Vietri · 2–3 semaines. Created with ALYKÈ Casa Nativa.']
+};
+const N=20,M=56,TW=256,TH=80,NQ=2*N*M+M,P=2*(N+1)*M,PX=new Float32Array(P),PY=new Float32Array(P),PD=new Float32Array(P),DEP=new Float32Array(NQ),ORD=new Uint16Array(NQ).map((_,i)=>i);
+const gi=(s,k,j)=>s*(N+1)*M+k*M+(j%M);
+const qv=q=>{if(q<2*N*M){const s=q/(N*M)|0,r=q%(N*M),k=r/M|0,j=r%M;return[gi(s,k,j),gi(s,k,j+1),gi(s,k+1,j+1),gi(s,k+1,j),s,k,j]}const j=q-2*N*M;return[gi(0,N,j),gi(0,N,j+1),gi(1,N,j+1),gi(1,N,j),0,N-1,j]};
+const K=(ts,vs,t)=>{for(let i=1;i<ts.length;i++)if(t<=ts[i]){const u=(t-ts[i-1])/(ts[i]-ts[i-1]);return lerp(vs[i-1],vs[i],u*u*(3-2*u))}return vs[vs.length-1]},sm=(a,b,t)=>Math.pow(Math.max(0,(t-a)/(b-a)),2);
+const PRE={dinner:{n:'Main Plate 26cm',fit:17,cy:1.6,asp:1,f:t=>[13*t,.5*t+2.4*sm(.72,1,t)]},small:{n:'Sharing Plate 20cm',fit:13,cy:1.3,asp:1,f:t=>[10*t,.4*t+2*sm(.7,1,t)]},
+bowl:{n:'Sharing Bowl 16cm',fit:10,cy:2.8,asp:1,f:t=>{const a=t*1.35;return[8*Math.sin(a)/Math.sin(1.35),5.6*(1-Math.cos(a))/(1-Math.cos(1.35))]}},platter:{n:'Large Platter 32×22',fit:20,cy:1.6,asp:.69,f:t=>[16*t,.5*t+2.6*sm(.75,1,t)]},
+amph:{fit:19,cy:15,asp:1,f:t=>[K([0,.08,.3,.55,.75,.88,1],[0,3.4,8.2,9,5.6,3.4,4.4],t),30*t]}};
+const LES=[{nm:['切塔拉海浪浅盘','The Cetara Wave Platter','Il piatto Onda di Cetara','Le plat Vague de Cetara'],p:'dinner',col:['#203F79','#E6B83F'],c:[
+['切塔拉渔村的餐桌讲究分享：一只大盘，海洋的律动与整桌人的笑声。','At Cetara’s fishing-village tables everything is shared: one big platter, the rhythm of the sea, and the laughter of the whole table.','Sulle tavole del villaggio di Cetara tutto si condivide: un grande piatto, il ritmo del mare e le risate di tutti.','Sur les tables du village de pêcheurs de Cetara, tout se partage : un grand plat, le rythme de la mer et les rires de la tablée.'],
+['盘沿起伏的波浪，是匠人对潮汐最温柔的记录。','The rippling rim records the tide in the gentlest way.','Il bordo ondulato racconta la marea con delicatezza.','Le bord ondulé raconte la marée avec douceur.'],
+['深海蓝勾边、柠檬黄点缀——像阳光落在切塔拉的海面上。','Deep sea blue and lemon yellow — like sunlight on the water at Cetara.','Blu mare profondo e giallo limone: come il sole sull’acqua di Cetara.','Bleu marine et jaune citron : comme le soleil sur l’eau de Cetara.']]},
+{nm:['维耶特里彩陶深碗','Vietri Majolica Bowl','Ciotola in maiolica di Vietri','Bol en majolique de Vietri'],p:'bowl',col:['#203F79','#E6B83F'],c:[
+['维耶特里的彩陶传统可追溯到 15 世纪，是阿马尔菲海岸的手艺名片。','Vietri’s majolica tradition goes back to the 15th century — the craft calling card of the Amalfi Coast.','La tradizione della maiolica di Vietri risale al XV secolo: il biglietto da visita artigianale della Costiera.','La tradition de la majolique de Vietri remonte au XVe siècle : la carte de visite artisanale de la côte amalfitaine.'],
+['碗口微微起伏，是为了让手更自然地托住它。','A softly undulating rim sits more naturally in the hand.','Un bordo leggermente ondulato sta meglio in mano.','Un bord légèrement ondulé se tient mieux en main.'],
+['在维耶特里，匠人习惯用海蓝与明黄记录阳光与海浪。','In Vietri, artisans use sea blue and bright yellow to record sunlight and waves.','A Vietri gli artigiani usano blu mare e giallo vivo per raccontare il sole e le onde.','À Vietri, les artisans emploient le bleu marine et le jaune vif pour dire le soleil et les vagues.']]},
+{nm:['地中海双耳陶罐','Mediterranean Amphora Vase','Anfora mediterranea','Amphore méditerranéenne'],p:'amph',col:['#6C8A62','#203F79'],c:[
+['双耳陶罐 Amphora：古罗马人用它在海上运送葡萄酒与橄榄油。','The amphora: ancient Romans used it to carry wine and olive oil by sea.','L’anfora: gli antichi Romani la usavano per trasportare vino e olio d’oliva via mare.','L’amphore : les Romains s’en servaient pour transporter vin et huile d’olive par mer.'],
+['收束的瓶颈让液体更稳，也让陶罐在船舱里更易固定。','A narrowed neck keeps the liquid steadier and makes the jar easier to secure in a ship’s hold.','Il collo stretto stabilizza il liquido e rende l’anfora più facile da fissare nella stiva.','Un col resserré stabilise le liquide et facilite l’arrimage dans la cale.'],
+['橄榄绿与海蓝，是海岸橄榄园与海水的颜色。','Olive green and sea blue — the colours of the coastal olive groves and the water.','Verde oliva e blu mare: i colori degli uliveti costieri e del mare.','Vert olive et bleu marine : les couleurs des oliveraies côtières et de la mer.']]}];
+const STEPS=[['拉坯定高宽','Pull: set height & width','Tira: altezza e larghezza','Tournage : hauteur et largeur'],['捏制特征轮廓','Shape the signature profile','Modella il profilo','Modeler le profil'],['经典釉色点睛','Classic glaze finish','Smalto classico','Émail classique']],COLS=['#203F79','#E6B83F','#6C8A62','#F4EBDD','#C8694A','#3A3532'];
+const CN={'#203F79':['深海蓝','Deep Sea Blue','Blu mare profondo','Bleu marine'],'#E6B83F':['阿马尔菲柠檬黄','Amalfi Lemon','Limone di Amalfi','Citron d’Amalfi'],'#6C8A62':['橄榄绿','Olive Green','Verde oliva','Vert olive'],'#F4EBDD':['奶油釉','Cream Glaze','Smalto crema','Émail crème'],'#C8694A':['切塔拉陶土红','Cetara Terracotta','Terracotta di Cetara','Terre cuite de Cetara'],'#3A3532':['暖陶灰','Clay Grey','Grigio argilla','Gris argile']};
+const RELS=[['fish','🐟'],['lemon','🍋'],['shell','🐚'],['rope','🪢']],RN={fish:['切塔拉小鱼','Coastal Fish','Pesciolino di Cetara','Poisson de Cetara'],lemon:['阿马尔菲柠檬与叶','Amalfi Lemon & Leaf','Limone e foglia di Amalfi','Citron et feuille d’Amalfi'],shell:['贝壳与珊瑚','Sea Shell & Coral','Conchiglia e corallo','Coquillage et corail'],rope:['麻花陶土耳柄','Twisted Rope Handle','Manico a treccia','Anse torsadée']};
+const NM={dinner:['主餐盘 26cm','Main Plate 26cm','Piatto piano 26cm','Assiette plate 26cm'],small:['分享小盘 20cm','Sharing Plate 20cm','Piatto da condividere 20cm','Assiette à partager 20cm'],bowl:['分享碗 16cm','Sharing Bowl 16cm','Ciotola da condividere 16cm','Bol à partager 16cm'],platter:['分享大盘 32×22','Large Platter 32×22','Vassoio grande 32×22','Grand plat 32×22']};
+const S={mode:'class',tool:'shape',view:'persp',pitch:.62,pT:.62,rot:.5,rotG:.5,color:'#203F79',gm:'brush',size:6,rel:'fish',scene:0,lx:-.35,ly:-.6,need:1};
+let V,LV,FV,W=1,H=1,hist=[],LAST={s:6},D=null,gk=null,design=null,cart=[],LI=0,ST=0;
+function mkV(f,o){const v={r:[],y:[],tr:[],ty:[],rim:Array(72).fill(0),trim:Array(72).fill(0),asp:o.asp||1,wall:.7,hs:1,fit:o.fit,cy:o.cy,rel:[],used:{},dip:0};for(let k=0;k<=N;k++){const[a,b]=f(k/N);v.r[k]=v.tr[k]=a;v.y[k]=v.ty[k]=b}v.baseR=v.r[N];
+const c=document.createElement('canvas');c.width=TW;c.height=TH*2;v.tx=c.getContext('2d',{willReadFrequently:true});v.tx.fillStyle='#EADBC4';v.tx.fillRect(0,0,TW,TH*2);v.dirty=1;return v}
+function setBase(k){const p=PRE[k];for(let i=0;i<=N;i++){const[a,b]=p.f(i/N);V.tr[i]=a;V.ty[i]=b}Object.assign(V,{asp:p.asp,fit:p.fit,cy:p.cy,hs:1,trim:Array(72).fill(0),base:k,baseR:p.f(1)[0]});$('#hs').value=1;S.need=1}
+function glaze(v,col){const t=v.tx,ac=col=='#203F79'||col=='#F4EBDD'?'#E6B83F':'#203F79';t.fillStyle=col;t.fillRect(0,0,TW,TH*2);t.fillStyle=ac;t.fillRect(0,TH*.86,TW,TH*.06);t.fillRect(0,TH*1.86,TW,TH*.06);v.dirty=1}
+/* ---------- renderer ---------- */
+function bg(c,W,H,o,v,s,cp,sp){if(o.scene){const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,'#D9E6EA');g.addColorStop(.38,'#F1E9D8');g.addColorStop(.38,'#CDB48C');g.addColorStop(1,'#B99C72');c.fillStyle=g;c.fillRect(0,0,W,H);c.fillStyle='#F4EBDD';c.fillRect(W*.08,H*.4,W*.84,H*.5);c.fillStyle='#203F79';c.fillRect(W*.08,H*.4,W*.84,5);c.fillRect(W*.08,H*.9-5,W*.84,5);c.fillStyle='rgba(255,244,214,.3)';for(let i=0;i<3;i++){c.beginPath();c.moveTo(W*(.5+i*.14)+S.lx*70,0);c.lineTo(W*(.58+i*.14)+S.lx*70,0);c.lineTo(W*(.2+i*.14),H);c.lineTo(W*(.08+i*.14),H);c.fill()}}
+else{const g=c.createRadialGradient(W/2,H*.45,10,W/2,H*.5,Math.max(W,H)*.7);g.addColorStop(0,'#FAF7F2');g.addColorStop(1,'#E8DCC8');c.fillStyle=g;c.fillRect(0,0,W,H)}
+const Rw=Math.max(8,(v.baseR||Math.max(...v.tr))*1.12+1.2),cr=Math.cos(o.rot),sr=Math.sin(o.rot),pj=(x,y,z)=>{const x1=x*cr+z*sr,z1=-x*sr+z*cr;return[W/2+x1*s,H/2-((y-v.cy)*cp-z1*sp)*s]},ring=(r,y)=>{const a=[];for(let i=0;i<48;i++){const th=i/48*6.2832;a.push(pj(r*Math.cos(th),y,r*Math.sin(th)))}return a},path=a=>{c.beginPath();a.forEach((q,i)=>i?c.lineTo(q[0],q[1]):c.moveTo(q[0],q[1]));c.closePath()},fr=(a,col)=>{path(a);c.fillStyle=col;c.fill()};
+fr(ring(Rw*1.1,-5.2),'rgba(58,53,50,.13)');for(let y=-5;y<=-2.3;y+=.4)fr(ring(Rw*(.34+.1*Math.max(0,-3.6-y)),y),y<-4.4?'#4a413b':'#6d625a');
+for(let y=-2.4;y<=-.05;y+=.3){const k=(y+2.4)/2.4;fr(ring(Rw,y),`rgb(${88+k*40|0},${80+k*38|0},${72+k*34|0})`)}
+fr(ring(Rw,-.02),'#d3c9b9');c.strokeStyle='rgba(95,78,60,.35)';c.lineWidth=1;for(const f of[.82,.58,.34]){path(ring(Rw*f,-.02));c.stroke()}
+for(let i=0;i<24;i++){const th=i/24*6.2832,a=pj(Rw*.88*Math.cos(th),-.02,Rw*.88*Math.sin(th)),b=pj(Rw*.97*Math.cos(th),-.02,Rw*.97*Math.sin(th));c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke()}
+const mk=pj(Rw*.9,-.02,0);c.fillStyle='#E6B83F';c.beginPath();c.arc(mk[0],mk[1],Math.max(3,s*.5),0,6.3);c.fill();c.strokeStyle='#efe6d6';c.lineWidth=2;path(ring(Rw,-.02));c.stroke()}
+function rel(c,t){c.lineWidth=.08;c.lineCap='round';c.strokeStyle='rgba(90,60,30,.55)';if(t=='fish'){c.fillStyle='#E2C39B';c.beginPath();c.ellipse(0,0,1.3,.6,0,0,6.3);c.fill();c.stroke();c.beginPath();c.moveTo(1.1,0);c.lineTo(1.9,-.6);c.lineTo(1.9,.6);c.closePath();c.fill();c.stroke();c.fillStyle='#3A3532';c.beginPath();c.arc(-.7,-.12,.1,0,6.3);c.fill()}
+else if(t=='lemon'){c.fillStyle='#6C8A62';c.beginPath();c.ellipse(.9,-.8,.8,.3,-.7,0,6.3);c.fill();c.fillStyle='#E6B83F';c.beginPath();c.ellipse(0,0,1,.75,.2,0,6.3);c.fill();c.stroke();c.fillStyle='rgba(255,255,255,.45)';c.beginPath();c.ellipse(-.3,-.25,.3,.15,.4,0,6.3);c.fill()}
+else if(t=='shell'){c.fillStyle='#EFDDC6';c.beginPath();c.arc(0,.5,1.2,Math.PI,6.28);c.closePath();c.fill();c.stroke();for(let i=1;i<6;i++){c.beginPath();c.moveTo(0,.5);c.lineTo(Math.cos(Math.PI+i*.52)*1.2,.5+Math.sin(Math.PI+i*.52)*1.2);c.stroke()}c.strokeStyle='#D98873';c.lineWidth=.2;c.beginPath();c.moveTo(1.1,.6);c.lineTo(1.5,-.2);c.moveTo(1.3,.2);c.lineTo(1.8,.1);c.stroke()}
+else{c.strokeStyle='#D9C3A0';c.lineWidth=.55;c.beginPath();c.arc(0,0,1.1,Math.PI*.1,Math.PI*.9,true);c.stroke();c.strokeStyle='rgba(90,60,30,.5)';c.lineWidth=.1;for(let i=0;i<9;i++){const a=Math.PI*.9-i*.1*Math.PI*.9;c.beginPath();c.moveTo(Math.cos(a)*.85,-Math.sin(a)*.85+0);c.lineTo(Math.cos(a)*1.35,-Math.sin(a)*1.35);c.stroke()}}}
+function draw(v,c,W,H,o){const cp=Math.cos(o.pitch),sp=Math.sin(o.pitch),cr=Math.cos(o.rot),sr=Math.sin(o.rot),s=Math.min(W,H)*.46*(o.zoom||1)/v.fit,ox=W/2,oy=H/2;if(o.bg)bg(c,W,H,o,v,s,cp,sp);
+if(v.dirty){v.td=v.tx.getImageData(0,0,TW,TH*2).data;v.dirty=0}const td=v.td,nin=[];
+for(let k=0;k<=N;k++){const a=Math.max(0,k-1),b=Math.min(N,k+1),dr=v.r[b]-v.r[a],dy=v.y[b]-v.y[a],l=Math.hypot(dr,dy)||1;nin[k]=[-dy/l,dr/l]}
+for(let s2=0;s2<2;s2++)for(let k=0;k<=N;k++){const w=Math.pow(k/N,3);for(let j=0;j<M;j++){const th=j/M*6.2832,ro=v.rim[Math.round(j/M*72)%72]*w;let rr=v.r[k]+ro,yy=v.y[k];if(s2){rr=Math.max(0,rr+v.wall*nin[k][0]);yy+=v.wall*nin[k][1]}
+const x=rr*Math.cos(th),z=rr*Math.sin(th)*v.asp,x1=x*cr+z*sr,z1=-x*sr+z*cr,y2=yy-v.cy,i=gi(s2,k,j);PX[i]=ox+x1*s;PY[i]=oy-(y2*cp-z1*sp)*s;PD[i]=z1*cp+y2*sp}}
+for(let q=0;q<NQ;q++){const g=qv(q);DEP[q]=(PD[g[0]]+PD[g[1]]+PD[g[2]]+PD[g[3]])*.25}ORD.sort((a,b)=>DEP[a]-DEP[b]);
+const l0=S.lx,l1=S.ly,l2=.7,ll=Math.hypot(l0,l1,l2),L=[l0/ll,l1/ll,l2/ll],hz=L[2]+1,hl=Math.hypot(L[0],L[1],hz);c.lineWidth=.8;c.lineJoin='round';
+for(let i=0;i<NQ;i++){const[a,b,e,d,s2,k,j]=qv(ORD[i]),ux=PX[b]-PX[a],uy=PY[b]-PY[a],uz=(PD[b]-PD[a])*s,wx=PX[d]-PX[a],wy=PY[d]-PY[a],wz=(PD[d]-PD[a])*s;let nx=uy*wz-uz*wy,ny=uz*wx-ux*wz,nz=ux*wy-uy*wx;const nl=Math.hypot(nx,ny,nz)||1;nx/=nl;ny/=nl;nz/=nl;
+const lam=Math.abs(nx*L[0]+ny*L[1]+nz*L[2]),spc=Math.pow(Math.abs((nx*L[0]+ny*L[1]+nz*hz)/hl),28)*.32,p=((s2*TH+(((k+.5)/N*TH)|0))*TW+(((j+.5)/M*TW)|0))*4,sh=(.5+.55*lam)*(s2?.93:1);
+c.fillStyle=c.strokeStyle=`rgb(${td[p]*sh+255*spc|0},${td[p+1]*sh+255*spc|0},${td[p+2]*sh+255*spc|0})`;c.beginPath();c.moveTo(PX[a],PY[a]);c.lineTo(PX[b],PY[b]);c.lineTo(PX[e],PY[e]);c.lineTo(PX[d],PY[d]);c.closePath();c.fill();c.stroke()}
+for(const e of v.rel){const k=e.k,a=Math.max(0,k-1),b=Math.min(N,k+1),dr=v.r[b]-v.r[a],dy=v.y[b]-v.y[a],l=Math.hypot(dr,dy)||1,nr=e.s?-dy/l:dy/l,ny=e.s?dr/l:-dr/l,th=e.u*6.2832,nx=nr*Math.cos(th),nz=nr*Math.sin(th),nd=(-nx*sr+nz*cr)*cp+ny*sp;if(nd<.08)continue;
+const i=gi(e.s,k,Math.round(e.u*M));c.save();c.translate(PX[i],PY[i]);c.scale(Math.min(1,.45+nd)*s,s);rel(c,e.t);c.restore()}
+if(o.ghost&&cp>.9){c.save();c.setLineDash([7,6]);c.strokeStyle='#203F79';c.lineWidth=2;c.globalAlpha=.75;for(const sg of[1,-1]){c.beginPath();o.ghost.r.forEach((r,k)=>{const x=ox+sg*r*s,y=oy-(o.ghost.y[k]-v.cy)*s*cp;k?c.lineTo(x,y):c.moveTo(x,y)});c.stroke()}c.restore()}
+if(o.main){const gx=W*(.5+S.lx*.6),gy=H*(.5+S.ly*.5),g=c.createRadialGradient(gx,gy,5,gx,gy,Math.max(W,H)*.55);g.addColorStop(0,'rgba(255,240,200,.24)');g.addColorStop(1,'rgba(255,240,200,0)');c.fillStyle=g;c.fillRect(0,0,W,H);LAST={s,ox,oy}}}
+/* ---------- editing ---------- */
+const inq=(x,y,ids)=>{let sg=0;for(let i=0;i<4;i++){const p=ids[i],q=ids[(i+1)%4],cr=(PX[q]-PX[p])*(y-PY[p])-(PY[q]-PY[p])*(x-PX[p]);if(cr){const t=cr>0?1:-1;if(sg&&t!==sg)return 0;sg=t}}return 1};
+function pick(px,py){for(let i=NQ-1;i>=0;i--){const g=qv(ORD[i]);if(inq(px,py,g)){const[a,b,,d,s,k,j]=g,ex=PX[b]-PX[a],ey=PY[b]-PY[a],fx=PX[d]-PX[a],fy=PY[d]-PY[a],det=ex*fy-ey*fx||1,dx=px-PX[a],dy=py-PY[a];return{s,u:(j+clamp((dx*fy-dy*fx)/det,0,1))/M,kf:ORD[i]>=2*N*M?N-.3:k+clamp((ex*dy-ey*dx)/det,0,1)}}}return null}
+function snap(){hist.push({v:V,tr:V.tr.slice(),ty:V.ty.slice(),tm:V.trim.slice(),rel:V.rel.map(e=>({...e})),img:V.tx.getImageData(0,0,TW,TH*2)});if(hist.length>14)hist.shift()}
+$('#undo').onclick=()=>{let h=hist.pop();while(h&&h.v!==V)h=hist.pop();if(!h)return toast(t('tUndo'));V.tr=h.tr;V.ty=h.ty;V.trim=h.tm;V.rel=h.rel;V.tx.putImageData(h.img,0,0);V.dirty=1;S.need=1}
+const grabK=p=>{const s=LAST.s,wx=Math.abs((p[0]-W/2)/s),wy=V.cy+(H/2-p[1])/s;let bk=N,bd=1e9;for(let k=1;k<=N;k++){const d=Math.hypot(V.r[k]-wx,V.y[k]-wy);if(d<bd){bd=d;bk=k}}return{k:bk,o:[V.r[bk]-wx,V.y[bk]-wy]}};
+function sculpt(p){const s=LAST.s,g=gk,wx=Math.abs((p[0]-W/2)/s)+g.o[0],wy=V.cy+(H/2-p[1])/s+g.o[1],a=wx-V.tr[g.k],b=wy-V.ty[g.k];[.12,.4,1,.4,.12].forEach((w,i)=>{const k=g.k+i-2;if(k<1||k>N)return;V.tr[k]=clamp(V.tr[k]+a*w,.3,22);V.ty[k]=clamp(V.ty[k]+b*w,0,36)})}
+function rimAt(p){const s=LAST.s,cr=Math.cos(S.rot),sr=Math.sin(S.rot),x1=(p[0]-W/2)/s,z1=(p[1]-H/2)/s,x=x1*cr-z1*sr,z=(x1*sr+z1*cr)/V.asp,rho=Math.hypot(x,z),th=Math.atan2(z,x),ds=rho-V.r[N];if(Math.abs(ds)>4)return;
+for(let b=0;b<72;b++){let d=Math.abs(b/72*6.2832-(th+6.2832)%6.2832);d=Math.min(d,6.2832-d);V.trim[b]=clamp(V.trim[b]+(ds-V.trim[b])*Math.exp(-((d/.22)**2))*.5,-3,3)}}
+function blob(t,x,y,R,col){const[r,g,b]=hex(col);for(const o of[0,-TW,TW]){const X=x+o;if(X<-R||X>TW+R)continue;const gr=t.createRadialGradient(X,y,0,X,y,R);gr.addColorStop(0,`rgba(${r},${g},${b},.85)`);gr.addColorStop(.55,`rgba(${r},${g},${b},.5)`);gr.addColorStop(1,`rgba(${r},${g},${b},0)`);t.fillStyle=gr;t.fillRect(X-R,y-R,R*2,R*2)}}
+function stamp(t,x,y,pat,R){t.save();t.translate(x,y);t.strokeStyle=S.color;t.lineWidth=R*.2;t.lineCap='round';t.beginPath();if(pat=='wave'){for(let i=-R;i<=R;i+=2){const yy=Math.sin(i/R*6)*R*.3;i==-R?t.moveTo(i,yy):t.lineTo(i,yy)}}else if(pat=='weave'){for(let i=-R;i<=R;i+=2){t.lineTo(i,Math.sin(i/R*5)*R*.4)}t.moveTo(-R,0);for(let i=-R;i<=R;i+=2)t.lineTo(i,-Math.sin(i/R*5)*R*.4)}else{t.arc(0,0,R*.8,0,6.3);for(let i=0;i<6;i++){t.moveTo(0,0);t.lineTo(Math.cos(i*1.047)*R*.8,Math.sin(i*1.047)*R*.8)}}t.stroke();t.restore()}
+function act(p,first){const h=pick(p[0],p[1]);if(!h){D.last=null;return}
+if(S.tool=='relief'){const e={t:S.rel,s:h.s,u:h.u,k:clamp(Math.round(h.kf),1,N)};if(first)V.rel.push(e);else if(V.rel.length)Object.assign(V.rel[V.rel.length-1],e);return}
+const t=V.tx,x=h.u*TW,y=h.s*TH+h.kf/N*TH,l=D.last,R=S.size*1.5+3;V.used[S.color]=1;
+if(S.gm=='brush'){if(l&&l[2]==h.s&&Math.abs(x-l[0])<TW/2){const n=Math.max(1,Math.ceil(Math.hypot(x-l[0],y-l[1])/(R*.35)));for(let i=1;i<=n;i++)blob(t,lerp(l[0],x,i/n),lerp(l[1],y,i/n),R,S.color)}else blob(t,x,y,R,S.color);D.last=[x,y,h.s]}
+else if(!l||l[2]!=h.s||Math.hypot(x-l[0],y-l[1])>R*2.2){stamp(t,x,y,S.gm,R);D.last=[x,y,h.s]}V.dirty=1}
+const dip=(col,cb)=>{V.dip={col,n:40,cb};S.need=1};
+/* ---------- pointer ---------- */
+const cv=$('#cv'),cx=cv.getContext('2d'),pt=e=>{const r=cv.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
+cv.onpointerdown=e=>{cv.setPointerCapture(e.pointerId);const p=pt(e);D={x:p[0],last:null};const T=S.tool;
+if(T=='shape'&&S.view=='front'){snap();gk=grabK(p);D.m='sc'}else if(T=='shape'&&S.view=='top'){snap();D.m='rim';rimAt(p)}else if(T=='shape')D.m='rot';else{snap();D.m=T;act(p,1)}S.need=1};
+cv.onpointermove=e=>{const p=pt(e);S.lx=clamp((p[0]/W-.5)*1.3-.2,-.8,.5);S.ly=-.75+p[1]/H*.3;S.need=1;if(!D)return;
+if(D.m=='sc')sculpt(p);else if(D.m=='rim')rimAt(p);else if(D.m=='rot'){S.rotG+=(p[0]-D.x)*.012;D.x=p[0]}else act(p,0)};
+cv.onpointerup=cv.onpointercancel=()=>{if(D&&D.m=='sc'||D&&D.m=='rim')chk();D=null};
+const size=()=>{const r=$('#stage').getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);S.need=1};new ResizeObserver(size).observe($('#stage'));
+/* ---------- loop ---------- */
+function tick(){requestAnimationFrame(tick);const v=V;if(!v)return;let ch=S.need;S.need=0;
+for(let k=0;k<=N;k++){let d=v.tr[k]-v.r[k];if(Math.abs(d)>.003){v.r[k]+=d*.2;ch=1}d=v.ty[k]-v.y[k];if(Math.abs(d)>.003){v.y[k]+=d*.2;ch=1}}
+for(let b=0;b<72;b++){const d=v.trim[b]-v.rim[b];if(Math.abs(d)>.003){v.rim[b]+=d*.2;ch=1}}
+if(S.spin&&!D)S.rotG+=.01;if(Math.abs(S.pT-S.pitch)>.002){S.pitch+=(S.pT-S.pitch)*.14;ch=1}if(Math.abs(S.rotG-S.rot)>.002){S.rot+=(S.rotG-S.rot)*.15;ch=1}
+if(v.dip){const d=v.dip,p=1-d.n/40,t=v.tx;t.globalAlpha=d.n==1?.7:.13;t.fillStyle=d.col;for(let s2=0;s2<2;s2++)t.fillRect(0,s2*TH+TH*(1-p),TW,TH*p+1);t.globalAlpha=1;v.dirty=1;ch=1;if(--d.n<=0){v.dip=0;v.used[d.col]=1;d.cb&&d.cb()}}
+if(S.mode=='class'&&ST==0)$('#score').textContent=Math.round(clamp(100-dist()*25,0,100))+'% '+t('match');
+if(ch){cx.clearRect(0,0,W,H);draw(v,cx,W,H,{pitch:S.pitch,rot:S.rot,main:1,bg:1,scene:S.scene,ghost:S.mode=='class'&&ST==0?LES[LI]:0})}}
+/* ---------- class ---------- */
+const dist=()=>{const L=LES[LI];let s=0;for(let k=1;k<=N;k++)s+=Math.abs(V.r[k]-L.tr[k])+Math.abs(V.y[k]-L.ty[k]);return s/N};
+function lesson(i){LI=i;ST=0;const L=LES[i],p=PRE[L.p];L.tr=[];L.ty=[];L.r=L.tr;L.y=L.ty;for(let k=0;k<=N;k++){const[a,b]=p.f(k/N);L.tr[k]=a;L.ty[k]=b}
+LV=mkV(t=>[K([0,.12,.5,.85,1],[0,4.6,5.4,5,4.2],t),7*t],{fit:p.fit,cy:p.cy,asp:1});V=LV;hist=[];$('#know').hidden=1;kn=null;enter();rc()}
+function enter(){const L=LES[LI];if(ST==0){view('front');S.tool='shape'}else if(ST==1){view('top');S.tool='shape'}else if(ST==2){view('persp');S.tool='glaze';S.gm='brush';S.color=L.col[0]}hint()}
+function kk(){if(!kn)return;const k=$('#know');k.hidden=0;k.textContent='✦ '+LES[kn[0]].c[kn[1]][LG]}
+function adv(){kn=[LI,ST];ST++;kk();if(ST<3)enter();else{S.tool='shape';view('persp');hint()}rc()}
+function chk(){if(S.mode!='class')return;if(ST==0&&dist()<1.1)adv();else if(ST==1){const m=V.trim.reduce((a,b)=>a+b,0)/72,sd=Math.sqrt(V.trim.reduce((a,b)=>a+(b-m)**2,0)/72);if(sd>.3)adv()}}
+function rc(){const L=LES[LI];$$$($('#lcards'),LES.map((l,i)=>`<button class="${i==LI?'on':''}" data-i="${i}">${i+1} · ${l.nm[LG]}</button>`).join(''));$$('#lcards button').forEach(b=>b.onclick=()=>lesson(+b.dataset.i));
+$$$($('#steps'),STEPS.map((tx,i)=>`<li class="${i<ST?'ok':i==ST?'cur':''}">${tx[LG]}</li>`).join(''));$('#assist').hidden=ST!=0;$('#score').hidden=ST!=0;
+$$$($('#sw1'),ST==2?L.col.map(c=>`<button class="sw" style="background:${c}" data-c="${c}"></button>`).join('')+'<span class="sm">'+t('swTip')+'</span>':'');
+$$('#sw1 .sw').forEach(b=>b.onclick=()=>{S.color=b.dataset.c;dip(S.color,()=>{if(ST==2)adv()})});$('#badge').hidden=ST<3}
+$('#assist').onclick=()=>{const L=LES[LI];snap();for(let k=1;k<=N;k++){V.tr[k]+=(L.tr[k]-V.tr[k])*.45;V.ty[k]+=(L.ty[k]-V.ty[k])*.45}S.need=1;setTimeout(chk,500)};
+/* ---------- ui ---------- */
+function hint(){$('#hint').textContent=t(S.tool=='glaze'?'hGlaze':S.tool=='relief'?'hRel':{front:'hFront',top:'hTop',persp:'hPersp'}[S.view])}
+function view(v){S.view=v;S.pT={persp:.62,front:.03,top:1.5707}[v];$$('.views button').forEach(b=>b.classList.toggle('on',b.dataset.v==v));hint();S.need=1}
+$$('.views button').forEach(b=>b.onclick=()=>view(b.dataset.v));$('#rl').onclick=()=>S.rotG-=Math.PI/6;$('#rr').onclick=()=>S.rotG+=Math.PI/6;
+$('#scene').onclick=()=>{S.scene^=1;$('#scene').classList.toggle('on',S.scene);S.need=1};$('#spin').onclick=()=>{S.spin^=1;$('#spin').classList.toggle('on',!!S.spin)};
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('s');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('s'),2600)}
+function go(m){S.mode=m;$$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));const st=m=='store';$('#studio').hidden=st;$('#store').hidden=!st;$('#intro').hidden=m!='class';if(st){store();scrollTo(0,0);return}
+$('#pc').hidden=m!='class';$('#pf').hidden=m!='free';if(m=='class'){if(!LV)lesson(0);V=LV;enter()}else{if(!FV){FV=mkV(PRE.dinner.f,PRE.dinner);FV.base='dinner'}V=FV;S.tool='shape';setTool('shape');view('persp')}hist=[];S.need=1;setTimeout(size,30)}
+$$('#nav button').forEach(b=>b.onclick=()=>go(b.dataset.m));$('#toFree').onclick=()=>go('free');
+function setTool(t){$$('#tools button').forEach(b=>b.classList.toggle('on',b.dataset.t==t));$$('.tp').forEach(p=>p.hidden=p.dataset.t!=t);S.tool=t=='mint'?'shape':t;hint()}
+$$('#tools button').forEach(b=>b.onclick=()=>setTool(b.dataset.t));
+const bs=['dinner','small','bowl','platter'],GM=[['brush',['笔刷','Brush','Pennello','Pinceau']],['wave',['波浪纹','Wave','Onda','Vague']],['weave',['交织纹','Interwoven','Intreccio','Entrelacs']],['citrus',['柑橘纹','Citrus','Agrumi','Agrumes']]];
+function lists(){$$$($('#bases'),bs.map(k=>`<button data-k="${k}">${tt(NM[k])}</button>`).join(''));$$('#bases button').forEach(b=>b.onclick=()=>{snap();setBase(b.dataset.k)});
+$$$($('#rels'),RELS.map(r=>`<button data-r="${r[0]}" class="${r[0]==S.rel?'on':''}">${r[1]} ${tt(RN[r[0]])}</button>`).join(''));$$('#rels button').forEach(b=>b.onclick=()=>{S.rel=b.dataset.r;$$('#rels button').forEach(x=>x.classList.toggle('on',x==b))});
+$$$($('#gms'),GM.map(g=>`<button data-g="${g[0]}" class="${g[0]==S.gm?'on':''}">${tt(g[1])}</button>`).join(''));$$('#gms button').forEach(b=>b.onclick=()=>{S.gm=b.dataset.g;$$('#gms button').forEach(x=>x.classList.toggle('on',x==b))})}
+$('#hs').oninput=e=>{const f=e.target.value/V.hs;for(let k=0;k<=N;k++)V.ty[k]=V.tr[k]*0+V.ty[k]*f;V.hs=+e.target.value;S.need=1};
+$('#hs').oninput=e=>{const f=e.target.value/V.hs;for(let k=0;k<=N;k++)V.ty[k]*=f;V.hs=+e.target.value;S.need=1};$('#wl').oninput=e=>{V.wall=+e.target.value;S.need=1};
+$('#wavy').onclick=()=>{snap();V.trim=V.trim.map((_,b)=>1.1*Math.sin(b/72*6.2832*7))};$('#smooth').onclick=()=>{snap();V.trim=Array(72).fill(0)};
+$('#rmrel').onclick=()=>{snap();V.rel.pop();S.need=1};
+$$$($('#cols'),COLS.map(c=>`<button class="sw ${c==S.color?'on':''}" style="background:${c}" data-c="${c}"></button>`).join(''));$$('#cols .sw').forEach(b=>b.onclick=()=>{S.color=b.dataset.c;$$('#cols .sw').forEach(x=>x.classList.toggle('on',x==b))});
+$('#sz').oninput=e=>S.size=+e.target.value;$('#dip').onclick=()=>{snap();dip(S.color)};
+/* ---------- design card ---------- */
+function wrap(c,t,x,y,mw,lh){let line='';for(const ch of t){if(c.measureText(line+ch).width>mw){c.fillText(line,x,y);y+=lh;line=ch}else line+=ch}c.fillText(line,x,y)}
+function mint(){const name=$('#echo').value.trim()||t('untitled'),insp=$('#insp').value.trim()||t('defInsp'),cv2=document.createElement('canvas');cv2.width=720;cv2.height=1000;const c=cv2.getContext('2d');
+c.fillStyle='#FAF7F2';c.fillRect(0,0,720,1000);c.strokeStyle='#D8CFC2';c.lineWidth=2;c.strokeRect(24,24,672,952);c.textAlign='center';c.fillStyle='#203F79';c.font='500 34px "Cormorant Garamond",Georgia,serif';c.fillText('CASA VIVA',360,80);c.font='12px Inter,sans-serif';c.fillStyle='#3A3532';const no=String(Math.floor(Math.random()*900)+100);c.fillText(t('cardT')+' '+no,360,104);
+const sn=(x,y,w,h,pitch,rot)=>{c.save();c.translate(x,y);c.beginPath();c.rect(0,0,w,h);c.clip();c.fillStyle='#F4EBDD';c.fillRect(0,0,w,h);draw(V,c,w,h,{pitch,rot,zoom:1.4});c.restore()};sn(60,124,600,380,.62,.5);sn(60,516,292,190,.03,0);sn(368,516,292,190,1.5707,0);
+c.fillStyle='#3A3532';c.font='11px Inter,sans-serif';c.fillText(t('front2'),206,722);c.fillText(t('top2'),514,722);
+c.fillStyle='#203F79';c.font='italic 500 44px "Cormorant Garamond",Georgia,serif';c.fillText(name,360,780);c.fillStyle='#3A3532';c.font='italic 17px "Cormorant Garamond",Georgia,serif';wrap(c,'“'+insp+'”',360,812,520,24);
+const rk=[...new Set(V.rel.map(e=>e.t))],rl=rk.map(k=>tt(RN[k])),cl=Object.keys(V.used);c.font='12px Inter,sans-serif';c.fillText(t('reliefsL')+': '+(rl.join(' · ')||'—'),360,880);
+cl.slice(0,5).forEach((h,i,a)=>{const x=360+(i-(a.length-1)/2)*110;c.fillStyle=h;c.beginPath();c.arc(x-30,908,9,0,6.3);c.fill();c.fillStyle='#3A3532';c.textAlign='left';c.fillText(h,x-16,912);c.textAlign='center'});if(!cl.length)c.fillText(t('bisque'),360,912);
+c.fillText('Created with ALYKÈ Casa Nativa',360,950);const url=cv2.toDataURL('image/png'),tcv=document.createElement('canvas');tcv.width=280;tcv.height=220;const tc=tcv.getContext('2d');tc.fillStyle='#F4EBDD';tc.fillRect(0,0,280,220);draw(V,tc,280,220,{pitch:.62,rot:.5,zoom:1.25});
+design={name,insp,no,thumb:tcv.toDataURL(),rel:rk,price:(({dinner:68,small:48,bowl:58,platter:98})[V.base]||68)+40,bk:V.base||'dinner'};
+modal(`<h3>${t('cardH')}</h3><img class="cd" src="${url}" alt="card"><p class="sm">${t('saveTip')}</p><div class="row" style="justify-content:center"><button id="sv">${t('saveB')}</button><button id="sh">${t('shareB')}</button><button class="pri" id="od">${t('orderB')}</button></div>`);
+$('#sv').onclick=()=>{const a=document.createElement('a');a.href=url;a.download='casa-viva-card.png';a.click();toast(t('tSaved'))};
+$('#sh').onclick=()=>cv2.toBlob(async b=>{try{const f=new File([b],'casa-viva-card.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:'CASA VIVA'});return}}catch(e){}toast(t('tShare'))});
+$('#od').onclick=()=>{$('#modal').hidden=1;go('store')}}
+$('#mint').onclick=mint;
+function modal(h){const m=$('#modal');m.innerHTML=`<div class="mb">${h}<button onclick="$('#modal').hidden=1">${t('close')}</button></div>`;m.hidden=0;S.need=1;m.onclick=e=>{if(e.target==m)m.hidden=1}}
+/* ---------- demo ---------- */
+function demo(){go('free');setTool('shape');snap();setBase('platter');V.tx.fillStyle='#EADBC4';V.tx.fillRect(0,0,TW,TH*2);V.rel=[];V.used={};V.trim=V.trim.map((_,b)=>1.1*Math.sin(b/72*6.2832*7));
+V.rel.push({t:'rope',s:0,u:0,k:N},{t:'rope',s:0,u:.5,k:N},{t:'fish',s:0,u:.25,k:N},{t:'lemon',s:1,u:.62,k:N-3},{t:'shell',s:1,u:.9,k:N-4});S.color='#203F79';$('#echo').value='Cetara Tide';$('#insp').value=t('demoInsp');view('persp');
+dip('#203F79',()=>{V.tx.fillStyle='#E6B83F';V.tx.fillRect(0,TH*.74,TW,TH*.05);V.tx.fillRect(0,TH*1.74,TW,TH*.05);V.used['#E6B83F']=1;V.dirty=1;setTimeout(mint,900)});toast(t('tDemo'))}
+$('#demo').onclick=demo;
+/* ---------- store ---------- */
+const MAT=['炻器 · 手工上釉','stoneware · hand-glazed','gres · smaltato a mano','grès · émaillé à la main'],WV=['波浪边','wavy rim','bordo ondulato','bord ondulé'],SETD=['四款器物组合 · 可选纸浆礼盒','Four-piece collection · optional pulp gift box','Collezione di quattro pezzi · confezione in pasta di carta opzionale','Collection de quatre pièces · coffret en pulpe en option'];
+const PROD=[
+['dinner',['柑橘枝主餐盘','Citrus Branch Dinner Plate','Piatto piano Ramo di Agrumi','Assiette Citronnier'],'Ø 26 cm',['柑橘与橄榄枝手绘装饰','Hand-painted citrus and olive branch','Decoro dipinto a mano con agrumi e ulivo','Décor peint à la main, agrumes et olivier'],68,'casa-viva-citrus-plate.jpg'],
+['bowl',['海浪分享碗','Sea Wave Sharing Bowl','Ciotola Onda del Mare','Bol Vague Marine'],'Ø 16 cm',['深海蓝手绘海浪纹','Hand-painted deep-blue wave motif','Motivo a onde blu dipinto a mano','Motif de vagues bleu profond peint à la main'],58,'casa-viva-wave-bowl.jpg'],
+['platter',['交织纹分享大盘','Interwoven Sharing Platter','Grande piatto Intreccio','Grand plat Entrelacs'],'32 × 22 cm',['海蓝与柠檬黄交织纹','Interwoven sea-blue and lemon-yellow lines','Linee intrecciate blu mare e giallo limone','Lignes entrelacées bleu marin et jaune citron'],98,'casa-viva-interwoven-platter.jpg'],
+['small',['波浪边分享小盘','Wavy-Rim Sharing Plate','Piatto Onda da condividere','Assiette à bord ondulé'],'Ø 20 cm',['手绘海蓝波浪边','Hand-painted sea-blue wavy rim','Bordo ondulato blu mare dipinto a mano','Bord ondulé bleu marin peint à la main'],48,'casa-viva-wave-rim-plate.jpg'],
+['set',['CASA VIVA 餐桌组合','CASA VIVA Table Collection Set','Set da tavola CASA VIVA','Ensemble de table CASA VIVA'],'4 件组合',['包含四款主推器物','Includes all four featured pieces','Include i quattro pezzi della collezione','Comprend les quatre pièces présentées'],248,'set']
+],SET_IMAGES=PROD.slice(0,4);
+SOON=[[['第二章：地中海亚麻织物','Chapter II: Coastal Linens','Capitolo II: Lini della costa','Chapitre II : Lins du littoral'],['手工流苏餐垫、餐巾与海岸桌布 · 2026 冬季上线','Hand-fringed placemats, napkins and coastal tablecloths · Coming Winter 2026','Tovagliette con frange a mano, tovaglioli e tovaglie costiere · Inverno 2026','Sets de table frangés main, serviettes et nappes du littoral · Hiver 2026']],
+[['第三章：切塔拉的气息','Chapter III: Scent of Cetara','Capitolo III: Profumo di Cetara','Chapitre III : Parfum de Cetara'],['手工陶土扩香器、柠檬叶与海盐无火香薰 · 2027 春季上线','Handmade terracotta diffusers, lemon-leaf and sea-salt flameless scents · Coming Spring 2027','Diffusori in terracotta, profumi senza fiamma di foglia di limone e sale marino · Primavera 2027','Diffuseurs en terre cuite, parfums sans flamme feuille de citron et sel marin · Printemps 2027']],
+[['第四章：手工玻璃器皿','Chapter IV: Artisanal Glassware','Capitolo IV: Vetro artigianale','Chapitre IV : Verrerie artisanale'],['地中海橄榄油瓶与餐酒杯具 · 2027 夏季上线','Olive-oil bottles and wine glasses · Coming Summer 2027','Bottiglie per olio d’oliva e calici · Estate 2027','Bouteilles d’huile d’olive et verres à vin · Été 2027']]],nt=[0,0,0];
+const pcol=['#E6B83F','#203F79','#203F79','#203F79','#E6B83F'],eur=n=>'€'+n;
+function th(i){const cvs=$('#th'+i),c=cvs.getContext('2d'),k=PROD[i][0],mk=key=>{const v=mkV(PRE[key].f,PRE[key]);glaze(v,pcol[i]);return v},o={pitch:.62,rot:.5,zoom:1.25};c.clearRect(0,0,280,220);
+if(k=='set'){draw(mk('dinner'),c,280,220,o);c.save();c.translate(95,70);draw(mk('bowl'),c,150,140,o);c.restore()}else draw(mk(k),c,280,220,o)}
+function store(){const b=design?`<div class="bes"><img src="${design.thumb}" alt="" style="width:100%;border-radius:10px;background:var(--cream)"><div style="display:flex;flex-direction:column;gap:6px"><span class="sm">${t('besH')}</span><h3>${design.name}</h3><p class="sm">${tt(NM[design.bk])} · N° ${design.no}${design.rel.length?' · '+design.rel.map(k=>tt(RN[k])).join(', '):''}</p><p>${t('madeTo')}</p><label><input type="checkbox" id="bg"> ${t('giftL')}</label><input type="text" id="bn" placeholder="${t('notePh')}"><div class="row"><b class="serif" style="font-size:24px">${eur(design.price)}</b><button class="pri" id="bad">${t('addBag')}</button></div></div></div>`:`<div class="bes" style="grid-template-columns:1fr;border-style:dashed;text-align:center"><p>${t('noDes')}</p><div><button class="pri" onclick="go('free')">${t('goFree')}</button></div></div>`;
+$$$($('#store'),`<div class="ban"><h2>CASA VIVA — The Mediterranean Home Living Collection</h2><p style="margin-top:8px;opacity:.9">${t('banSub')}</p></div><h3>${t('besH')}</h3><div style="margin:10px 0">${b}</div><h3>${t('ch1')}</h3><div class="grid">${PROD.map((p,i)=>`<div class="pc">${p[5]==='set'?`<div class="product-collage">${SET_IMAGES.map(x=>`<img src="${x[5]}" alt="${tt(x[1])}">`).join('')}</div>`:`<img src="${p[5]}" alt="${tt(p[1])}">`}<b>${tt(p[1])}</b><span class="sm">${p[2]} · ${tt(p[3])}</span><div class="row" style="justify-content:space-between;margin-top:auto"><b>${eur(p[4])}</b><button data-a="${i}">${t('addBag')}</button></div></div>`).join('')}</div><h3>${t('upc')}</h3><div class="grid">${SOON.map((sn,i)=>`<div class="soon"><span class="sm">${t('soonTag')}</span><h3>${tt(sn[0])}</h3><p class="sm">${tt(sn[1])}</p><button data-n="${i}" class="${nt[i]?'on':''}" style="margin-top:10px">${nt[i]?t('notified'):t('notify')}</button></div>`).join('')}</div>`);
+$$('[data-a]').forEach(b=>b.onclick=()=>{const i=+b.dataset.a;add({id:PROD[i][0]+pcol[i],pi:i,col:pcol[i],price:PROD[i][4],thumb:PROD[i][5]==='set'?PROD[0][5]:PROD[i][5]})});
+$$('[data-n]').forEach(b=>b.onclick=()=>{const i=+b.dataset.n;nt[i]^=1;b.classList.toggle('on',!!nt[i]);b.textContent=nt[i]?t('notified'):t('notify')});
+if(design)$('#bad').onclick=()=>add({id:'bespoke'+design.no,bn:design.name,price:design.price,thumb:design.thumb,gift:$('#bg').checked,note:$('#bn').value})}
+function add(it){const f=cart.find(x=>x.id==it.id);f?f.q++:cart.push({...it,q:1});bag();toast(t('tAdd'))}
+function bag(open){const n=cart.reduce((a,b)=>a+b.q,0),tot=cart.reduce((a,b)=>a+b.q*(b.price+(b.gift?8:0)),0),nm=c=>c.bn||tt(PROD[c.pi][1]),sb=c=>c.bn?t('besSub'):tt(CN[c.col]);$('#bagN').textContent=n;
+$$$($('#bag'),`<div class="row" style="justify-content:space-between"><h3>${t('bagH')}</h3><button id="bx">✕</button></div>${cart.map((c,i)=>`<div class="ci"><img src="${c.thumb}" alt=""><div><b>${nm(c)}</b><div class="sm">${sb(c)}${c.note?' · “'+c.note+'”':''}</div><div class="row"><button data-q="${i}" data-d="-1">−</button>${c.q}<button data-q="${i}" data-d="1">+</button><label class="sm"><input type="checkbox" data-g="${i}" ${c.gift?'checked':''}> ${t('giftB')}</label><b style="margin-left:auto">${eur(c.q*(c.price+(c.gift?8:0)))}</b></div></div></div>`).join('')||`<p class="sm">${t('empty')}</p>`}<div class="row" style="justify-content:space-between;margin-top:auto"><b>${t('total')}</b><b class="serif" style="font-size:24px">${eur(tot)}</b></div><button class="pri" id="co" ${n?'':'disabled'}>${t('checkout')}</button>`);
+if(open!==undefined)$('#bag').classList.toggle('open',open);$('#bx').onclick=()=>bag(false);$$('[data-q]').forEach(b=>b.onclick=()=>{const c=cart[+b.dataset.q];c.q+=+b.dataset.d;if(c.q<1)cart.splice(+b.dataset.q,1);bag()});$$('[data-g]').forEach(b=>b.onchange=()=>{cart[+b.dataset.g].gift=b.checked;bag()});
+$('#co').onclick=()=>{const no='CV-26-'+Math.floor(Math.random()*90000+10000),rows=cart.map(c=>`<div class="row" style="justify-content:space-between"><span>${c.q} × ${nm(c)}</span><span>${eur(c.q*(c.price+(c.gift?8:0)))}</span></div>`).join('');cart=[];bag(false);
+modal(`<div style="font-size:34px">🍋</div><h3>${t('ordH')}</h3><p class="sm">${t('ordNo')}</p><b class="serif" style="font-size:28px;color:var(--sea)">${no}</b><div style="border-top:1px dashed var(--sand);border-bottom:1px dashed var(--sand);padding:10px 0;text-align:left">${rows}<div class="row" style="justify-content:space-between;margin-top:6px"><b>${t('total')}</b><b>${eur(tot)}</b></div></div><p class="sm">${t('ordNote')}</p>`)}}
+$('#bagBtn').onclick=()=>bag(!$('#bag').classList.contains('open'));bag(false);
+lesson(0);tick();setTimeout(size,50);
+function setLang(i){LG=i;document.documentElement.lang=['zh','en','it','fr'][i];$('#lang').value=i;$$('[data-l]').forEach(e=>e.textContent=t(e.dataset.l));$$('[data-lp]').forEach(e=>e.placeholder=t(e.dataset.lp));lists();rc();hint();kk();bag();if(!$('#store').hidden)store();try{localStorage.setItem('cv-lang',i)}catch(e){}S.need=1}
+$('#lang').onchange=e=>setLang(+e.target.value);
+let L0=-1;try{L0=+localStorage.getItem('cv-lang');if(localStorage.getItem('cv-lang')===null)L0=-1}catch(e){}
+const nl=(navigator.language||'en').slice(0,2);setLang(L0>=0?L0:nl=='zh'?0:nl=='it'?2:nl=='fr'?3:1);
+
+</script></body></html>
